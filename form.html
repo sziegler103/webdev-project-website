@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Form</title>
+
+    <meta name="description" content="An example of an HTML form">
+    <meta name="keywords" content="HTML, form, fields">
+    <meta name="author" content="Stephen Ziegler">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" 
+    href="resources/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css"
+    href="resources/stylesheets/form.css">
+    <link rel="icon" type="image/icon" href="resources/favicon.ico">
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html"
+      title="Go to the homepage">
+        <img src="resources/folder_icon.svg" 
+        alt="A folder."
+        width="114"
+        height="72" 
+        class="svg">
+      </a>
+      <span class="title">Stephen Ziegler's CS 2350 Portfolio</span>
+      <span class="rightTitle">Form</span>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html"
+          title="Go to the homepage">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="3dmodeling.html"
+            title="Go to the page about 3D modeling">
+            3D Modeling
+          </a>
+        </li>
+        <li>
+          <a href="icarus_tutorial.html"
+          title="Go to the tutorial page on how to host to Icarus">
+            Icarus Tutorial
+          </a>
+        </li>
+        <li>
+          <a href="css_concepts.html"
+          title="Go to the page about Cascading Style Sheet concepts.">
+            CSS Concepts
+          </a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button>More &#x25BC;</button>
+            <div  class="dropdown-content">
+              <a href="madlib.html"
+              title="Go to Mad Lib">
+                Mad Lib
+              </a>
+              <a href="slideshow.html"
+              title="Go to the photo slideshow">
+                Slideshow
+              </a>
+              <a href="form.html"
+              title="Go to the example HTML form">
+                HTML Form
+              </a>
+              <a href="jquery_examples.html"
+              title="Go to the series of jQuery example animations">
+                jQuery
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <h1>HTML Form</h1>
+    <div class="row">
+      <main class="col-12">
+
+        <section class="maxwidthSection">
+          <h2>Convention Sign-Up Form</h2>
+
+          <form action="https://icarus.cs.weber.edu/~linda/cs2350/submit.php"
+          method="post">
+            <fieldset>
+              <legend>Basic Info</legend>
+              <!-- Editable text boxes -->
+              <div>
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname" id="firstname">
+              </div>
+              <div class="spacer"></div>
+              <div>
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" id="lastname">
+              </div>
+              <div class="spacer"></div>
+              <!-- Dropdown -->
+              <div>
+                <label for="ticketselect">Select Ticket</label>
+                <select id="ticketselect" name="ticketselect">
+                  <option value="0">Select an option</option>
+                  <option value="1">Day Pass</option>
+                  <option value="2">3-Days</option>
+                  <option value="3">Full Stay</option>
+                </select>
+              </div>
+            </fieldset>
+            <div class="spacer"></div>
+
+            <!-- Checkboxes/Radio Buttons -->
+            <fieldset>
+              <legend>Booth Info</legend>
+              <div>
+                Are you hosting a booth?
+              </div>
+              <div id="boothradios">
+                <div>
+                  <input type="radio" name="hostingbooth" id="booth1" value="0">
+                  <label for="booth1">Yes</label>
+                </div>
+                <div>
+                  <input type="radio" name="hostingbooth" id="booth2" value="1" checked="checked">
+                  <label for="booth2">No</label>
+                </div>
+              </div>
+              <div class="spacer"></div>
+              <div class="boothitem">
+                <label for="boothinfo">Booth Name</label>
+                <input type="text" name="boothinfo" id="boothinfo">
+              </div>
+            </fieldset>
+            <div class="spacer"></div>
+
+            <!-- Readonly text boxes -->
+            <fieldset>
+              <legend>Final Info</legend>
+              <div>
+                <label class="attachedReadonly">Name</label>
+                <input type="text" name="final_name" id="final_name" readonly>
+              </div>
+              <div class="spacer"></div>
+              <div class="boothitem">
+                <label class="attachedReadonly">Booth Name</label>
+                <input type="text" name="booth_name" id="booth_name" readonly>
+              </div>
+              <div class="spacer boothitem"></div>
+              <div class="boothitem">
+                <label class="attachedReadonly">Booth Cost</label>
+                <input type="text" name="booth_cost" id="booth_cost" value="0.00" readonly>
+              </div>
+              <div class="spacer boothitem"></div>
+              <div>
+                <label class="attachedReadonly" for="ticketcost">Ticket Cost</label>
+                <input type="text" name="ticketcost" id="ticketcost" readonly>
+              </div>
+              <div class="spacer"></div>
+              <div>
+                <label class="attachedReadonly" for="salestax">Sales Tax</label>
+                <input type="text" name="salestax" id="salestax" readonly>
+              </div>
+              <div class="spacer"></div>
+              <div>
+                <label class="attachedReadonly" for="finalcost">Final Cost</label>
+                <input type="text" name="finalcost" id="finalcost" readonly>
+              </div>
+            </fieldset>
+            <div class="spacer"></div>
+
+            <!-- Submit button -->
+            <div class="formCenter">
+              <input type="submit" name="submit" value="Submit">
+            </div>
+          </form>
+        </section>
+
+      </main>
+    </div>
+
+    <footer class="col-12">
+      <p>
+        <a href="#"
+        title="Return to the top of the page">
+          Return to Top
+        </a>
+        <a href="index.html"
+        title="Return to the Homepage">
+          Go to Homepage
+        </a>
+      </p>
+    </footer>
+
+    <script src="resources/scripts/form.js"></script>
+  </body>
+</html>

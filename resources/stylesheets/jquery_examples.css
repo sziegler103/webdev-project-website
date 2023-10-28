@@ -1,0 +1,116 @@
+.animArea {
+  display: inline-block;
+  width: 370px;
+  height: 102px;
+  padding: 20px 0px;
+  border: 2px dashed #555;
+}
+
+#hideshowArea {
+  width: 330px;
+  padding: 50px 20px 0px 20px;
+}
+
+.hideBox {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  user-select: none;
+  cursor: pointer;
+}
+
+.hideBox:hover {
+  background-color: #666;
+}
+
+#pulseArea.animArea {
+  height: auto;
+}
+
+#pulse1 {
+  position: absolute;
+}
+
+#pulse2 {
+  position: relative;
+  box-shadow: none !important;
+}
+
+.arrows, .arrows div {
+  display: inline-block;
+}
+
+.arrows {
+  cursor: pointer;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-left: 60px solid #333;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  transition: border-left-color .5s;
+}
+
+.arrows:hover .arrow-right {
+  border-left-color: #666;
+  transition: border-left-color .3s;
+}
+
+.arrows:active .arrow-right {
+  border-left-color: #999;
+  transition: border-left-color 0s;
+}
+
+#arrow1 {
+  position: relative;
+  right: -15px;
+}
+
+#arrow2 {
+  position: relative;
+  right: 0px;
+}
+
+#arrow3 {
+  position: relative;
+  right: 15px;
+}
+
+.swingingRectangle {
+  padding-top: 40px;
+  color: #FFF;
+  position: relative;
+  left: 20px;
+  border-radius: 2px;
+  width: 100px;
+  height: 60px;
+  background-color: #225A2B;
+  transition: background-color .5s;
+  cursor: pointer;
+  user-select: none;
+}
+
+.swingingRectangle:hover {
+  background-color: #3A9148;
+  transition: background-color .3s;
+}
+
+.swingingRectangle:active {
+  background-color: #38CE51;
+  transition: background-color 0s;
+}
+
+.animArea>.slideRect {
+  margin-top: -6px;
+}
+
+.slideRect {
+  display: inline-block;
+  width: 200px;
+  height: 33px;
+  background-color: #666;
+  border: 2px solid #AAA;
+}

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>CSS Concepts</title>
+
+    <meta name="description" content="A page describing basic CSS concepts.">
+    <meta name="keywords" content="CSS, Cascading Style Sheets, HTML Style">
+    <meta name="author" content="Stephen Ziegler">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/icon" href="resources/favicon.ico">
+    <link rel="stylesheet" type="text/css" 
+    href="resources/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" 
+    href="resources/stylesheets/concepts_style.css">
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html"
+      title="Go to the homepage">
+        <img src="resources/folder_icon.svg" 
+        alt="A folder."
+        width="114"
+        height="72" 
+        class="svg">
+      </a>
+      <span class="title">Stephen Ziegler's CS 2350 Portfolio</span>
+      <span class="rightTitle">CSS Concepts</span>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html"
+          title="Go to the homepage">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="3dmodeling.html"
+            title="Go to the page about 3D modeling">
+            3D Modeling
+          </a>
+        </li>
+        <li>
+          <a href="icarus_tutorial.html"
+          title="Go to the tutorial page on how to host to Icarus">
+            Icarus Tutorial
+          </a>
+        </li>
+        <li>
+          <a href="css_concepts.html"
+          title="Go to the page about Cascading Style Sheet concepts.">
+            CSS Concepts
+          </a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button>More &#x25BC;</button>
+            <div  class="dropdown-content">
+              <a href="madlib.html"
+              title="Go to Mad Lib">
+                Mad Lib
+              </a>
+              <a href="slideshow.html"
+              title="Go to the photo slideshow">
+                Slideshow
+              </a>
+              <a href="form.html"
+              title="Go to the example HTML form">
+                HTML Form
+              </a>
+              <a href="jquery_examples.html"
+              title="Go to the series of jQuery example animations">
+                jQuery
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <h1>CSS Concepts</h1>
+    <main class="col-12">
+      <p>
+        This webpage will cover a few basic concepts regarding Cascading Style
+        Sheets.
+      </p>
+
+      <section>
+        <h2>CSS Box Model</h2>
+        <!--  -->
+        <img src="resources/images/cssconcepts_images/box_model.png"
+        alt="An image showing the box model used by Cascading Style Sheets."
+        width="400"
+        height="325">
+        <p class="imageCaption">
+          The CSS Box Model. By Matthias Apsel, CC0,
+          <a href="https://commons.wikimedia.org/w/index.php?curid=34932417"
+          target="_blank"
+          title="Go to the source page of this image at Wikimedia Commons">
+          Wikimedia Commons
+          </a>
+        </p>
+        <p>
+          The CSS Box model contains 4 major parts:
+        </p>
+          <ul>
+            <li>Content</li>
+            <li>Padding</li>
+            <li>Border</li>
+            <li>Margin</li>
+          </ul>
+        <p>
+          Content is whatever you want to actually display, whether that be text
+          or image data. Imagining an actual box that you'd ship something in,
+          content would be the item that you're shipping. Padding is space between
+          the content and the border. You can think of it like packing material.
+          The border is a line that separates padding and margin. Think of it like
+          the actual cardboard edges of our analogous box. Finally, margin is the
+          amount of space between the border of the current element and other
+          elements, or in our analogy, how much room we allow between boxes. We
+          will elaborate on padding and margin in the upcoming section.
+        </p>
+        <h3>Padding</h3>
+        <p>
+          Padding adds space between the inner content and outer edges of an
+          element. If an element has a defined width or height, the content within
+          that element will fill to that width or height, and then padding will
+          add space beyond that.
+        </p>
+        <div id="padDiv1">
+          Uniform padding, 20px for top, bottom, and sides. Our element has a
+          defined width of 400px, so the text will stretch to that size (or fill
+          it with whitespace), and then padding will be added on beyond it.
+        </div>
+        <div id="padDiv2">
+          Alternating padding, top and bottom have 40px of padding, left side and
+          right side have a padding of 20px. Notice the extra space between the
+          top and bottom of the box compared to the top and bottom of the area the
+          text fills.
+        </div>
+        <div id="padDiv3">
+          Varied padding. All sides have differing padding amounts. 80px for top,
+          60px for right side, 40px for bottom, 20px for left side. This
+          convoluted padding style makes the text appear to be in the bottom left
+          of our box.
+        </div>
+        <h3>Margin</h3>
+        <div id="margDiv1">
+          Default margin setting. Hypothetically, this element has a margin size
+          of 0px. However, most browsers set the &lt;body&gt; to have a small
+          default margin size, which this element inherits from. The size of this
+          implicit margin varies by how your specific browser implements it.
+        </div>
+        <div id="margDiv2">
+          Left margin set to 40px. Notice how our gray box appears to have been
+          nudged to the right. You can imagine an invisible box 40px wide and of
+          an equivalent height to this element sitting in the space that is now
+          displacing this text box.
+        </div>
+        <div id="margDiv3">
+          Left margin set to 100px. This is just like the previous example, but
+          with a larger number. Now you can imagine that we've asked for a 100px
+          invisible box to sit on the left side of this element and displace it.
+        </div>
+      </section>
+
+      <section>
+        <h2>Style Changes on Hover</h2>
+        <p>
+          To "hover" over an element means to move your mouse cursor over its
+          content, padding, or border. Resting your mouse cursor over an element's
+          associated margin does not count as hovering. While the user is hovering
+          over some element, we can ask the browser to respond in some way through
+          HTML or CSS. You've already seen this done through the use of the
+          HTML "title" attribute showing a small tooltip when a user mouses over
+          an element it's applied to (such as a link). Now, with CSS you can do
+          many more things of that nature.
+        </p>
+        <div id="hoverDiv1">
+          This element will not change when you hover over it. Think of it as our
+          control case.
+        </div>
+        <div id="hoverDiv2">
+          This element will change color when you hover over it over the course of
+          4 seconds.
+        </div>
+        <div id="hoverDiv3">
+          This element will change its width when you hover over it. Notice how
+          the text automatically adjusts.
+        </div>
+      </section>
+
+      <section>
+        <h2>Color Contrast</h2>
+        <p>
+          The World Wide Web Consortium (W3C) standard setting body created an
+          accessibility standard dubbed WCAG, which stands for Web Content
+          Accessibility Guidelines. Part of those guidelines go over color
+          contrast, rating the differences between text color and its background.
+          While calculating color contrast ratios is beyond the scope of this
+          page, it boils down to two ratings: AA and AAA. The WCAG double-A rating
+          requires (among other things) a contrast ratio of at least 4.5:1 for
+          normal-sized text. The WCAG triple-A rating requires a contrast ratio of
+          at least 7:1 for normal-sized text. The following table will show a few
+          examples.
+        </p>
+
+        <table>
+          <tr>
+            <th>Text</th>
+            <th>Background Color</th>
+            <th>Text Color</th>
+            <th>Contrast Ratio</th>
+            <th>Rating</th>
+          </tr>
+          <tr>
+            <td id="contrast1">Black and White</td>
+            <td>#FFFFFF</td>
+            <td>#000000</td>
+            <td>21:1</td>
+            <td>AAA</td>
+          </tr>
+          <tr>
+            <td id="contrast2">White and Gray</td>
+            <td>#636363</td>
+            <td>#FFFFFF</td>
+            <td>6:1</td>
+            <td>AA</td>
+          </tr>
+          <tr>
+            <td id="contrast3">Yellow Bluish</td>
+            <td>#3333FF</td>
+            <td>#FFFF00</td>
+            <td>6.39:1</td>
+            <td>AA</td>
+          </tr>
+          <tr>
+            <td id="contrast4">Red and Green</td>
+            <td>#00FF00</td>
+            <td>#FF0000</td>
+            <td>2.91:1</td>
+            <td>None</td>
+          </tr>
+          <tr>
+            <td id="contrast5">Sea Greens</td>
+            <td>#00FFB3</td>
+            <td>#00D5FF</td>
+            <td>1.33:1</td>
+            <td>None</td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>Position</h2>
+        <p>
+          The position property affects how elements are placed on a webpage.
+          We will cover three types: Relative, Absolute, and Fixed position.
+        </p>
+        <h3>Relative Position</h3>
+        <div class="examplePageBorder">
+          The dark gray box is an element with relative positioning and offsets of
+          400px to the right and 50px upwards. First of all, notice the
+          <div class="exampleBox" id="box1"></div>
+          empty space the box leaves in the spot it would be if it were not
+          offset. If you put your mouse within the black border to simulate the
+          window changing size, notice how the box moves downwards with its "ghost
+          position."
+        </div>
+        <p class="imageCaption">
+          Hover over the text to watch the box move relative to its original
+          position.
+        </p>
+        <h3>Absolute Position</h3>
+        <div class="examplePageBorder" id="ancestorPage">
+          <div class="exampleBox" id="box2"></div>
+          This box has absolute positioning. This means that instead of being
+          positioned relative to where it would be otherwise, it's positioned
+          absolutely according to the closest ancestor it has with an explicitly
+          set position. If it can't find an ancestor with an explicitly set
+          position, it will fall back to the body and be positioned according to
+          that instead. Luckily for us, our gray box is nested inside of the div
+          creating the black outline, so it's positioned according to that
+          instead. Notice how absolutely positioned elements don't leave behind a
+          "ghost" element where they should be.
+        </div>
+        <p class="imageCaption">
+          Hovering over this box to simulate a page-resize won't move this gray
+          box. Absolutely positioned elements are strictly positioned to the
+          top-left of the element they're stuck to.
+        </p>
+        <h3>Fixed Position</h3>
+        <p>
+          Fixed position will position an element according to the user's screen
+          instead of according to any element on the page. This would be annoying
+          to demonstrate here, since it would be like putting a sticky-note on
+          your monitor. An animated .webp might do the trick though.
+        </p>
+        <!-- <div class="exampleBox" id="box3"></div> -->
+        <img src="resources/images/cssconcepts_images/fixed_position.webp"
+        alt="An animated image showing a gray box remaining stationary on the
+        screen as this webpage is scrolled through in the background."
+        width="266"
+        height="222">
+      </section>
+
+      <section>
+        <h2>Shadows</h2>
+        <p>
+          Text shadows and box shadows can be applied to various elements to give
+          your webpage a sense of depth and to draw attention to certain things.
+          An example of box-shadow property follows.
+        </p>
+
+        <h3>Horizontal Property</h3>
+        <div class="shadowBox" id="sbox1"></div>
+        <div class="shadowBox" id="sbox2"></div>
+        <p>
+          Box shadows can be positioned relative to the element they're applied
+          to. These examples show a black shadow positioned by varying degrees to
+          the right of a red box with an orange border.
+        </p>
+        <h3>Vertical Property</h3>
+        <div class="shadowBox" id="sbox3"></div>
+        <div class="shadowBox" id="sbox4"></div>
+        <p>
+          Shadows can also be positioned vertically relative to the element that
+          they are applied to. This example shows 2 boxes, one with a shadow
+          adjusted vertically by 20px, another by 40px.
+        </p>
+        <h3>Blur Property</h3>
+        <div class="shadowBox" id="sbox5"></div>
+        <div class="shadowBox" id="sbox6"></div>
+        <p>
+          Finally, shadows can be blurred to varying degrees. Here, the shadows
+          are directly under their applied element but blurred to varying degrees.
+        </p>
+      </section>
+    </main>
+
+    <footer class="col-12">
+      <p>
+        <a href="#"
+        title="Return to the top of the page">
+          Return to Top
+        </a>
+        <a href="index.html"
+        title="Return to the Homepage">
+          Go to Homepage
+        </a>
+      </p>
+    </footer>
+
+  </body>
+</html>

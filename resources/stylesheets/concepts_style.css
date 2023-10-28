@@ -1,0 +1,190 @@
+section {
+  margin: 0px;
+}
+
+.imageCaption {
+  font-size: .8em;
+}
+
+[id^="padDiv"] {
+  background-color: #DDD;
+  border: 2px dashed #555;
+  width: 400px;
+  text-align: center;
+}
+
+#padDiv1 {
+  padding: 20px;
+}
+
+#padDiv2 {
+  padding: 40px 20px;
+}
+
+#padDiv3 {
+  padding: 80px 60px 40px 20px;
+}
+
+[id^="margDiv"] {
+  background-color: #DDD;
+  border: 2px dashed #555;
+  width: 400px;
+  text-align: center;
+  padding: 4px;
+}
+
+/* 
+#margDiv1 is unnecessary to use.
+*/
+
+#margDiv2 {
+  margin-left: 40px;
+}
+
+#margDiv3 {
+  margin-left: 100px;
+}
+
+[id^="hoverDiv"] {
+  background-color: #DDD;
+  border: 2px dashed #555;
+  width: 400px;
+  padding: 4px;
+  margin: 4px;
+}
+
+/*
+#hoverDiv1 is unnecessary to use.
+*/
+
+#hoverDiv2 {
+  transition: background-color 4s;
+}
+
+#hoverDiv2:hover {
+  background-color: #BB1111;
+}
+
+#hoverDiv3 {
+  transition: width 2s;
+}
+
+#hoverDiv3:hover {
+  width: 600px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 2px solid #333;
+  padding: 4px;
+}
+
+/*black and white*/
+#contrast1 {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+#contrast2 {
+  color: #FFFFFF;
+  background-color: #636363;
+}
+
+#contrast3 {
+  color: #FFFF00;
+  background-color: #3333FF;
+}
+
+#contrast4 {
+  color: #FF0000;
+  background-color: #00FF00;
+}
+
+#contrast5 {
+  color: #00D5FF;
+  background-color: #00FFB3;
+}
+
+div.examplePageBorder {
+  border: 1px solid black;
+  width: 400px;
+  height: auto;
+  transition: width .5s;
+  transition-timing-function: linear;
+}
+
+div.examplePageBorder:hover {
+  width: 200px;
+}
+
+div.exampleBox {
+  background-color: #333;
+  border: 3px solid #AAA;
+  width: 70px;
+  height: 70px;
+}
+
+#box1 {
+  position: relative;
+  left: 400px;
+  bottom: 50px;
+}
+
+#ancestorPage {
+  position: relative;
+}
+
+#box2 {
+  position: absolute;
+  left: 400px;
+  top: 5px;
+}
+
+/* #box3 {
+  position: fixed;
+  left: 15%;
+  top: 15%;
+} */
+
+div.shadowBox {
+  background-color:#BB1111;
+  border: 2px solid #FFAA00;
+  width: 100px;
+  height: 100px;
+}
+
+#sbox1 {
+  box-shadow: 20px 0px;
+  margin-bottom: 5px;
+}
+
+#sbox2 {
+  box-shadow: 40px 0px;
+}
+
+#sbox3 {
+  box-shadow: 0px 20px;
+  margin-bottom: 30px;
+}
+
+#sbox4 {
+  box-shadow: 0px 40px;
+  margin-bottom: 50px;
+}
+
+#sbox5 {
+  box-shadow: 0px 0px 5px;
+  margin-bottom: 20px;
+}
+
+#sbox6 {
+  box-shadow: 0px 0px 20px;
+  margin-bottom: 20px;
+}
+
+main section {
+  text-align: initial;
+}

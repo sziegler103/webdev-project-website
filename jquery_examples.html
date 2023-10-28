@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+	
+	  <title>jQuery Examples</title>
+	
+    <meta name="description" 
+    content="Webpage shows a series of example animations made with jQuery">
+    <meta name="keywords" content="jQuery, animation, HTML, JavaScript">
+    <meta name="author" content="Stephen Ziegler">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" 
+    href="resources/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css"
+    href="resources/stylesheets/jquery_examples.css">
+    <link rel="icon" type="image/icon" href="resources/favicon.ico">
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html"
+      title="Go to the homepage">
+        <img src="resources/folder_icon.svg" 
+        alt="A folder."
+        width="114"
+        height="72" 
+        class="svg">
+      </a>
+      <span class="title">Stephen Ziegler's CS 2350 Portfolio</span>
+      <span class="rightTitle">jQuery</span>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html"
+          title="Go to the homepage">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="3dmodeling.html"
+            title="Go to the page about 3D modeling">
+            3D Modeling
+          </a>
+        </li>
+        <li>
+          <a href="icarus_tutorial.html"
+          title="Go to the tutorial page on how to host to Icarus">
+            Icarus Tutorial
+          </a>
+        </li>
+        <li>
+          <a href="css_concepts.html"
+          title="Go to the page about Cascading Style Sheet concepts.">
+            CSS Concepts
+          </a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button>More &#x25BC;</button>
+            <div  class="dropdown-content">
+              <a href="madlib.html"
+              title="Go to Mad Lib">
+                Mad Lib
+              </a>
+              <a href="slideshow.html"
+              title="Go to the photo slideshow">
+                Slideshow
+              </a>
+              <a href="form.html"
+              title="Go to the example HTML form">
+                HTML Form
+              </a>
+              <a href="jquery_examples.html"
+              title="Go to the series of jQuery example animations">
+                jQuery
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <h1>jQuery Examples</h1>
+    <div class="row">
+      <main class="col-12">
+        <section class="maxwidthSection">
+
+          <h3> Hide/Show</h3>
+          <div class="animArea" id="hideshowArea">
+            <div class="hideBox"></div>
+            <div class="hideBox"></div>
+            <div class="hideBox"></div>
+            <div class="hideBox"></div>
+            <div class="hideBox"></div>
+            <div class="hideBox"></div>
+            <div class="hideBox"></div>
+            <br>
+            <span>Click on individual boxes.</span>
+          </div>
+          <br>
+          <br>
+
+          <h3>Pulse</h3>
+          <div class="animArea" id="pulseArea">
+            <img src="resources/images/jquery_images/standby1.png"
+            alt="A 3D render of a lightbulb"
+            width="256"
+            height="256"
+            class="pulseImg"
+            id="pulse1">
+            <img src="resources/images/jquery_images/standby2.png"
+            alt="A 3D render of a lightbulb"
+            width="256"
+            height="256"
+            class="pulseImg"
+            id="pulse2">
+          </div>
+          <br>
+          <br>
+
+          <h3>Staggered move and fade</h3>
+          <div class="animArea">
+            <div class="arrows">
+              <div class="arrow-right" id="arrow1"></div>
+              <div class="arrow-right" id="arrow2"></div>
+              <div class="arrow-right" id="arrow3"></div>
+            </div>
+            <br>
+            <span>Click me!</span>
+          </div>
+          <br>
+          <br>
+
+          <h3>Move and resize</h3>
+          <div class="animArea">
+            <div class="swingingRectangle">Click me!</div>
+          </div>
+          <br>
+          <br>
+
+          <h3>Sliding rectangles</h3>
+          <div class="animArea">
+            <div class="slideRect" id="slide1"></div>
+            <div class="slideRect" id="slide2"></div>
+            <div class="slideRect" id="slide3"></div>
+          </div>
+
+        </section>
+      </main>
+    </div>
+
+    <footer class="col-12">
+      <p>
+        <a href="#"
+        title="Return to the top of the page">
+          Return to Top
+        </a>
+        <a href="index.html"
+        title="Return to the Homepage">
+          Go to Homepage
+        </a>
+      </p>
+    </footer>
+
+    <script src="resources/scripts/jquery_examples.js"></script>
+  </body>
+</html>

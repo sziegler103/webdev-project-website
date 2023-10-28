@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Mad Lib: Intro to Driving</title>
+
+    <meta name="description" content="A single game of Mad Libs made with JS">
+    <meta name="keywords" content="phrasal, word game, mad libs">
+    <meta name="author" content="Stephen Ziegler">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" 
+    href="resources/stylesheets/style.css">
+    <link rel="icon" type="image/icon" href="resources/favicon.ico">
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html"
+      title="Go to the homepage">
+        <img src="resources/folder_icon.svg" 
+        alt="A folder."
+        width="114"
+        height="72" 
+        class="svg">
+      </a>
+      <span class="title">Stephen Ziegler's CS 2350 Portfolio</span>
+      <span class="rightTitle">Mad Lib</span>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html"
+          title="Go to the homepage">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="3dmodeling.html"
+            title="Go to the page about 3D modeling">
+            3D Modeling
+          </a>
+        </li>
+        <li>
+          <a href="icarus_tutorial.html"
+          title="Go to the tutorial page on how to host to Icarus">
+            Icarus Tutorial
+          </a>
+        </li>
+        <li>
+          <a href="css_concepts.html"
+          title="Go to the page about Cascading Style Sheet concepts.">
+            CSS Concepts
+          </a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button>More &#x25BC;</button>
+            <div  class="dropdown-content">
+              <a href="madlib.html"
+              title="Go to Mad Lib">
+                Mad Lib
+              </a>
+              <a href="slideshow.html"
+              title="Go to the photo slideshow">
+                Slideshow
+              </a>
+              <a href="form.html"
+              title="Go to the example HTML form">
+                HTML Form
+              </a>
+              <a href="jquery_examples.html"
+              title="Go to the series of jQuery example animations">
+                jQuery
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <h1>Mad Lib</h1>
+    <div class="row">
+      <main class="col-12">
+        <p>
+          Mad Libs are fill-in-the-blank word games. The player is presented
+          with a series of blanks to be filled by a particular type of word
+          (typically a noun, verb, adjective, or adverb). After the blanks
+          are filled, the story is read aloud, sometimes to humorous effect.
+        </p>
+        <p>
+          With the implementation of Mad Libs here, you will fill in the
+          following text boxes with the word-type asked for, and click the
+          "Generate Story" button when you're done. The story will appear with your
+          words filled in.
+        </p>
+        <section class="maxwidthSection" id="madlibSection">
+          <h2>Intro to Driving</h2>
+          <p>
+            <label for="madlibword1">Noun</label>
+            <input type="text" id="madlibword1">
+          </p>
+          <p>
+            <label for="madlibword2">Noun</label>
+            <input type="text" id="madlibword2">
+          </p>
+          <p>
+            <label for="madlibword3">Verb</label>
+            <input type="text" id="madlibword3">
+          </p>
+          <p>
+            <label for="madlibword4">Noun</label>
+            <input type="text" id="madlibword4">
+          </p>
+          <p>
+            <label for="madlibword5">Emotion Adjective</label>
+            <input type="text" id="madlibword5">
+          </p>
+          <p>
+            <label for="madlibword6">Body Part</label>
+            <input type="text" id="madlibword6">
+          </p>
+          <p>
+            <label for="madlibword7">Verb with "ing" suffix</label>
+            <input type="text" id="madlibword7">
+          </p>
+          <p>
+            <label for="madlibword8">Adjective</label>
+            <input type="text" id="madlibword8">
+          </p>
+          <p>
+            <button onclick="displayMadLib()">Generate Story</button>
+          </p>
+          <p id="madlibpar1"></p>
+          <p id="madlibpar2"></p>
+          <!-- 
+            Image uses the Pexels license. No attribution required. 
+            https://www.pexels.com/photo/black-car-steering-wheel-244824/
+          -->
+          <img src="resources/images/madlib_images/car_interior.jpg"
+          alt="The interior of a car"
+          width="400"
+          height="267"
+          class="imgResize">
+          <!-- 
+            Images uses the Pixabay license. No attribution required.
+            https://pixabay.com/photos/speedometer-dashboard-car-speed-1249610/
+          -->
+          <img src="resources/images/madlib_images/speedometer.jpg"
+          alt="A speedometer"
+          width="400"
+          height="267"
+          class="imgResize">
+        </section>
+      </main>
+    </div>
+
+    <footer class="col-12">
+      <p>
+        <a href="#"
+        title="Return to the top of the page">
+          Return to Top
+        </a>
+        <a href="index.html"
+        title="Return to the Homepage">
+          Go to Homepage
+        </a>
+      </p>
+    </footer>
+
+    <script src="resources/scripts/madlib.js"></script>
+  </body>
+</html>

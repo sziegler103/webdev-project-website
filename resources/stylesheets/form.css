@@ -1,0 +1,81 @@
+form {
+  text-align: left;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+fieldset {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  max-width: 512px;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+
+fieldset legend {
+  font-weight: bold;
+}
+
+form label {
+  display: inline-block;
+  width: 130px;
+}
+
+input[type="text"] {
+  width: 250px;
+  height: 20px;
+}
+
+select {
+  height: 26px;
+  width: 258px;
+  text-align: center;
+}
+
+input[type=text], select {
+  border: 2px solid #888;
+  outline: none;
+}
+
+input[type=text]:focus, select:focus {
+  border: 2px solid #E00707;
+}
+
+input[readonly], label.attachedReadonly {
+  cursor: text;
+}
+
+input[readonly]:focus, label.attachedReadonly:focus {
+  border: 2px solid #888;
+}
+
+input[type="submit"] {
+  height: 40px;
+  width: 120px;
+  font-size: 20px;
+  border: 2px solid #888;
+  background-color: #DDD;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #EEE;
+}
+
+input[type="submit"]:active {
+  background-color: #888;
+}
+
+
+div.formCenter {
+  text-align: center;
+}
+
+div.spacer {
+  padding: 5px 0;
+}
+
+div.boothitem {
+  display: none;
+}

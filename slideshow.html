@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Slideshow</title>
+
+    <meta name="description" content="A small slideshow of pictures made with JS">
+    <meta name="keywords" content="slideshow, pictures, photos">
+    <meta name="author" content="Stephen Ziegler">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" 
+    href="resources/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css"
+    href="resources/stylesheets/slideshow.css">
+    <link rel="icon" type="image/icon" href="resources/favicon.ico">
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html"
+      title="Go to the homepage">
+        <img src="resources/folder_icon.svg" 
+        alt="A folder."
+        width="114"
+        height="72" 
+        class="svg">
+      </a>
+      <span class="title">Stephen Ziegler's CS 2350 Portfolio</span>
+      <span class="rightTitle">Slideshow</span>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html"
+          title="Go to the homepage">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="3dmodeling.html"
+            title="Go to the page about 3D modeling">
+            3D Modeling
+          </a>
+        </li>
+        <li>
+          <a href="icarus_tutorial.html"
+          title="Go to the tutorial page on how to host to Icarus">
+            Icarus Tutorial
+          </a>
+        </li>
+        <li>
+          <a href="css_concepts.html"
+          title="Go to the page about Cascading Style Sheet concepts.">
+            CSS Concepts
+          </a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button>More &#x25BC;</button>
+            <div  class="dropdown-content">
+              <a href="madlib.html"
+              title="Go to Mad Lib">
+                Mad Lib
+              </a>
+              <a href="slideshow.html"
+              title="Go to the photo slideshow">
+                Slideshow
+              </a>
+              <a href="form.html"
+              title="Go to the example HTML form">
+                HTML Form
+              </a>
+              <a href="jquery_examples.html"
+              title="Go to the series of jQuery example animations">
+                jQuery
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <h1>Photography Slideshow</h1>
+    <div class="row">
+      <main class="col-12">
+        <section class="maxwidthSection">
+          <h2>Photos I've Taken</h2>
+          <img id="slideImage" 
+          class="imgResize" 
+          src="resources/images/slideshow_images/abstract.jpg"
+          width="600"
+          height="450"
+          alt="A macro photo of a microfiber cloth">
+          <p id="slideCaption">
+            This is a macro photograph of a microfiber
+            glasses cleaning cloth. It's admittedly a little strange. I guess I
+            must've been feeling creative that day.
+          </p>
+          <p class="buttonContainer">
+            <button class="slideshowButton" id="previousSlide">Previous</button>
+            <button class="slideshowButton" id="playSlideshow">Play</button>
+            <button class="slideshowButton" id="pauseSlideshow">Pause</button>
+            <button class="slideshowButton" id="nextSlide">Next</button>
+          </p>
+        </section>
+        <p></p>
+        <section class="maxwidthSection">
+          <h2>Info</h2>
+          <p>
+            These are all photographs I took at some point that I thought were
+            interesting enough to display here. They were taken with a Canon
+            PowerShot SX530 HS. It has up to 50x optical zoom and wireless/NFC
+            capabilities integrated into it. Besides that, it's not that much
+            different than a cheap(er) point-and-shoot camera. For example, it
+            doesn't have a view finder, only a digital display. On a spectrum of
+            camera grades, it would sit in the middle of point-and-shoot style
+            cameras and heavy-weight DSLR (Digital Single-Lens Reflex) cameras.
+            Cameras that sit in that range are called "bridge" cameras, because
+            they bridge the gap between the two extremes. The SX530 is lacking
+            when it comes to its aperture range and ISO settings, but its manual
+            mode still allows for some creative control when necessary. The
+            extreme amount of zoom the camera is capable of creates 
+            opportunities for photographs which would otherwise require very
+            expensive telescopic lenses to capture.
+          </p>
+          <p>
+            As for the pictures themselves, they were taken at the highest
+            quality setting allowable by the camera. Their lighting was slightly
+            adjusted and the color saturation was somewhat boosted on a few of
+            them. To prepare them for the web, they were downscaled to 600x450,
+            and compressed with a 95% JPEG quality setting. As a note about the
+            caption of the last picture, the image sensor of any digital camera
+            can be damaged by the sun if exposed for even seconds, as the lens
+            of the camera focuses the sunlight into a tight beam, which is then
+            directed at the Charged Couple Device or Complementary Metal-Oxide
+            Semiconductor. Similarly to anything on the other end of a properly
+            adjusted magnifying glass on a sunny day, this is not good for the
+            internals of your camera. However, SLR-type cameras redirect all
+            light through their viewfinders, only exposing their film or image
+            sensor for however long the shutter speed is set to open. So while
+            one should avoid looking into an SLR's viewfinder at the sun,
+            pictures "fired from the hip" can still be taken without too much
+            risk to the camera itself.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <footer class="col-12">
+      <p>
+        <a href="#"
+        title="Return to the top of the page">
+          Return to Top
+        </a>
+        <a href="index.html"
+        title="Return to the Homepage">
+          Go to Homepage
+        </a>
+      </p>
+    </footer>
+
+    <script src="resources/scripts/slideshow.js"></script>
+  </body>
+</html>

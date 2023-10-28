@@ -1,0 +1,12 @@
+th {
+  max-width: 100px;
+}
+
+td.textCell {
+  max-width: 200px;
+}
+
+/* .imgResize {
+  max-width: 100%;
+  height: auto;
+} */
